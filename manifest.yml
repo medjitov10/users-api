@@ -1,0 +1,8 @@
+    applications:
+    - name: spring-boot-microservices-users-api
+      memory: 512M
+      instances: 1
+      docker:
+        image: david8015/spring-boot-microservices-users-api:0.0.1-SNAPSHOT
+      env:
+        SPRING_PROFILES_ACTIVE: local
