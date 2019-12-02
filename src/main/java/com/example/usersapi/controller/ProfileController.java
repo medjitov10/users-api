@@ -1,5 +1,6 @@
 package com.example.usersapi.controller;
 
+import com.example.usersapi.exception.EntityNotFoundException;
 import com.example.usersapi.model.Profile;
 import com.example.usersapi.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -17,7 +18,7 @@ public class ProfileController {
     }
 
     @PostMapping
-    public Profile createProfile(@RequestHeader("username") String username, @RequestBody Profile profile) {
+    public Profile createProfile(@RequestHeader("username") String username, @RequestBody Profile profile) throws EntityNotFoundException {
         return userService.createProfile(profile, username);
     }
 

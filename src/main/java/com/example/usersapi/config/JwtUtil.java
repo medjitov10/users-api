@@ -31,4 +31,3 @@ public class JwtUtil implements Serializable {
                 .signWith(SignatureAlgorithm.HS512, secret).compact();
     }
 }
-
